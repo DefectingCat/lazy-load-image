@@ -77,23 +77,23 @@ document.body.append(ul);
 
 // /////////////内容会抖动///////////////// //
 // 创建图片
-function createImg() {
-  let frag = document.createDocumentFragment();
-  let num = 28;
-  for (let i = 0; i < 9; i++) {
-    let img = document.createElement('img');
-    // placeholder 地址
-    img.src = './img/placeholder.gif';
-    // 图片真实地址
-    img.setAttribute('data-src', `./img/file_49639${num}.webp`);
-    num++;
-    frag.append(img);
-  }
-  frag.append(document.createElement('hr'));
-  return frag;
-}
-let images = createImg();
-document.body.append(images);
+// function createImg() {
+//   let frag = document.createDocumentFragment();
+//   let num = 28;
+//   for (let i = 0; i < 9; i++) {
+//     let img = document.createElement('img');
+//     // placeholder 地址
+//     img.src = './img/placeholder.gif';
+//     // 图片真实地址
+//     img.setAttribute('data-src', `./img/file_49639${num}.webp`);
+//     num++;
+//     frag.append(img);
+//   }
+//   frag.append(document.createElement('hr'));
+//   return frag;
+// }
+// let images = createImg();
+// document.body.append(images);
 
 // /////////////根据图片设置尺寸，防止内容抖动///////////////// //
 // 请求携带尺寸的图片
@@ -164,7 +164,7 @@ function createImg2() {
     img.setAttribute('data-src', `${i.src}`);
     // 根据请求的图片尺寸动态设置尺寸
     img.style.width = `${i.w}px`;
-    img.style.height = `${i.h}px`;
+    // img.style.height = `${i.h}px`;
     frag.append(img);
   }
   frag.append(document.createElement('hr'));
@@ -172,8 +172,6 @@ function createImg2() {
 }
 let images2 = createImg2();
 document.body.append(images2);
-
-// /////////////懒加载的实现///////////////// //
 
 // /////////////懒加载的实现///////////////// //
 // 选中所有懒加载的图片
