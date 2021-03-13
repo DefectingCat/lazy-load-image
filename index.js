@@ -76,15 +76,62 @@ let ul = createLi();
 document.body.append(ul);
 
 // 创建图片
+let requestImg = [
+  {
+    src: './img/file_4963928.webp',
+    w: 450,
+    h: 512,
+  },
+  {
+    src: './img/file_4963929.webp',
+    w: 450,
+    h: 512,
+  },
+  {
+    src: './img/file_4963930.webp',
+    w: 450,
+    h: 512,
+  },
+  {
+    src: './img/file_4963931.webp',
+    w: 450,
+    h: 512,
+  },
+  {
+    src: './img/file_4963932.webp',
+    w: 450,
+    h: 512,
+  },
+  {
+    src: './img/file_4963933.webp',
+    w: 450,
+    h: 512,
+  },
+  {
+    src: './img/file_4963934.webp',
+    w: 450,
+    h: 512,
+  },
+  {
+    src: './img/file_4963935.webp',
+    w: 450,
+    h: 512,
+  },
+  {
+    src: './img/file_4963936.webp',
+    w: 450,
+    h: 512,
+  },
+];
 function createImg() {
   let frag = document.createDocumentFragment();
   let num = 28;
   for (let i = 0; i < 9; i++) {
     let img = document.createElement('img');
     // placeholder 地址
-    img.src = './img/placeholder.gif';
+    img.src = `./img/placeholder/file_49639${num}.webp`;
     // 图片真实地址
-    img.setAttribute('data-src', `./img/file_49639${num}.png`);
+    img.setAttribute('data-src', `./img/file_49639${num}.webp`);
     num++;
     frag.append(img);
   }
